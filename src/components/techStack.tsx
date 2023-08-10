@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Heading from "./ui/heading";
 
 export default function TechStack() {
   return (
     <div className="mb-4">
-      <header>
-        <h1 className="text-3xl font-bold mb-6">Tech Stack</h1>
-      </header>
+      <Heading>Tech Stack</Heading>
       <img
         className="inline mb-1 mr-1"
         src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"

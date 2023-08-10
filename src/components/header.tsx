@@ -5,11 +5,11 @@ export default function Header() {
   return (
     <div className="flex lg:flex-row justify-between lg:items-center mb-8 flex-col-reverse">
       <div>
-        <h1 className="md:text-3xl text-3xl font-bold tracking-tight mb-4 text-slate-900">
+        <h1 className="md:text-2xl text-2xl font-bold tracking-tight mb-4 text-slate-900">
           I&apos;m Stephan
         </h1>
-        <h3 className="text-slate-900 text-xl mb-4">Software Developer 👨‍💻</h3>
-        <p className="text-slate-900/60 text-xl">
+        <h3 className="text-slate-900 text-base mb-4">Software Developer 👨‍💻</h3>
+        <p className="text-slate-900/60 text-base">
           Building fast
           <span className=" text-slate-50">⚡</span>, scalable
           <span className=" text-slate-50">📈</span>, robust

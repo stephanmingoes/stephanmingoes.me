@@ -1,17 +1,16 @@
 import React from "react";
+import Heading from "./ui/heading";
 
 export default function About() {
   return (
-    <div>
-      <header>
-        <h1 className="text-3xl font-bold mb-4">About</h1>
-      </header>
+    <div id="about">
+      <Heading>About</Heading>
       <h1 className="text-base font-bold mb-6">
         Stephan Mingoes, Bsc. Computer Science 2024
       </h1>
       <article>
         {" "}
-        <p className="text-lg text-justify">
+        <p className="text-base text-justify">
           As a Software Developer, I am constantly seeking new challenges and
           opportunities to expand my knowledge and skillset. I am deeply
           passionate about using technology to solve real-world problems and
