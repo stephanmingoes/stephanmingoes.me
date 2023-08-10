@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   return (
-    <nav className="  my-8">
+    <nav className="my-8">
       <NavMenu />
     </nav>
   );
