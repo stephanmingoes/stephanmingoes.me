@@ -125,7 +125,14 @@ const projects: Project[] = [
   {
     name: "My Website",
     description: `This website was created to showcase my portfolio, projects, and expertise in web development.`,
-    skills: ["NextJS", "TypeScript", "Resend", "TailwindCSS", "Vercel"],
+    skills: [
+      "NextJS",
+      "TypeScript",
+      "Resend",
+      "ShadCn",
+      "TailwindCSS",
+      "Vercel",
+    ],
     githubUrl: "https://github.com/stephanmingoes/stephanmingoes.me",
     websiteUrl: "https://www.stephanmingoes.me/",
   },
