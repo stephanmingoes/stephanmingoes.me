@@ -156,6 +156,7 @@ const projects: Project[] = [
       "TypeScript",
       "CockroachDB",
       "TailwindCSS",
+      "Prisma",
       "ShadCn",
       "ClerkDev",
       "ReactQuery",
