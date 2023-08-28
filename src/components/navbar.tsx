@@ -28,7 +28,7 @@ function Links() {
       {[
         ["Home", "/"],
 
-        ["About", "#about"],
+        ["About", "/about"],
       ].map((link: string[]) => (
         <li key={link[0]}>
           <Link

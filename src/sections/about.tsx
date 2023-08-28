@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "./ui/heading";
+import Heading from "../components/ui/heading";
 
 export default function About() {
   return (

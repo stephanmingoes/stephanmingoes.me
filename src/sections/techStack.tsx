@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Heading from "./ui/heading";
+import Heading from "../components/ui/heading";
 
 export default function TechStack() {
   return (

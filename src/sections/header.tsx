@@ -9,7 +9,7 @@ export default function Header() {
           I&apos;m Stephan
         </h1>
         <h3 className="text-slate-900 text-base mb-4">Software Developer 👨‍💻</h3>
-        <p className="text-slate-900/60 text-base">
+        <p className="text-muted-foreground text-base">
           Building fast
           <span className=" text-slate-50">⚡</span>, scalable
           <span className=" text-slate-50">📈</span>, robust
