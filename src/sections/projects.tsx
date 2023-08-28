@@ -18,6 +18,7 @@ import {
   SiChakraui,
   SiVercel,
   SiNextdotjs,
+  SiPrisma,
 } from "react-icons/si";
 import Link from "next/link";
 type IconType = typeof BiLogoTypescript | React.SVGProps<SVGSVGElement>;
@@ -119,6 +120,14 @@ const technologies: SkillType[] = [
     description:
       "Vercel's frontend cloud gives developers frameworks, workflows, and infrastructure to build a faster, more personalized web.",
   },
+  {
+    icon: SiPrisma,
+    url: "https://prisma.io/",
+    name: "Prisma",
+    className: "text-slate-950",
+    description:
+      "Open source Node.js and TypeScript ORM with an intuitive data model, automated migrations, type-safety, and auto-completion.",
+  },
 ];
 
 const projects: Project[] = [
@@ -168,7 +177,7 @@ export default function Projects() {
   return (
     <div>
       <Heading>Projects</Heading>
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
         {projects.map((project) => (
           <ProjectCard key={project.name} {...project} />
         ))}
