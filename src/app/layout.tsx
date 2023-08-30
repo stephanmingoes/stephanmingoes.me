@@ -3,6 +3,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "@/sections/footer";
+import Provider from "@/trpc/Provider";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,15 +36,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        {" "}
-        <div className="flex justify-center items-center ">
-          <main className="w-10/12 lg:w-[850px]">
-            {" "}
-            <Navbar />
-            {children}
-            <Footer />
-          </main>
-        </div>
+        <Provider>
+          <div className="flex justify-center items-center ">
+            <main className="w-10/12 lg:w-[850px]">
+              <Navbar />
+              {children}
+              <Footer />
+            </main>
+          </div>
+        </Provider>
+        <Toaster />
       </body>
     </html>
   );

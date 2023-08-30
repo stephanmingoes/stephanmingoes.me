@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 import { usePathname } from "next/navigation";
+import ContactForm from "./contactForm";
 
 export default function Navbar() {
   return (
@@ -42,6 +43,9 @@ function Links() {
           </Link>
         </li>
       ))}
+      <li>
+        <ContactForm />
+      </li>
     </>
   );
 }
