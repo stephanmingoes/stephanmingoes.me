@@ -20,6 +20,7 @@ import {
   SiNextdotjs,
   SiPrisma,
   SiTrpc,
+  SiExpress,
 } from "react-icons/si";
 import Link from "next/link";
 type IconType = typeof BiLogoTypescript | React.SVGProps<SVGSVGElement>;
@@ -50,6 +51,14 @@ const technologies: SkillType[] = [
     className: "mt-3",
     name: "NextJS",
     description: "React framework for building server-rendered applications.",
+  },
+  {
+    icon: SiExpress,
+    url: "https://expressjs.com/",
+    className: "",
+    name: "ExpressJS",
+    description:
+      "Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.",
   },
   {
     icon: BiLogoTypescript,
@@ -162,6 +171,21 @@ const projects: Project[] = [
     ],
     githubUrl: "https://github.com/stephanmingoes/stephanmingoes.me",
     websiteUrl: "https://www.stephanmingoes.me/",
+  },
+  {
+    name: "QwizLab",
+    description: `This website was created to showcase my portfolio, projects, and expertise in web development.`,
+    skills: [
+      "NextJS",
+      "TypeScript",
+      "CockroachDB",
+      "Prisma",
+      "ChakraUI",
+      "Vercel",
+      "ExpressJS",
+    ],
+    githubUrl: "https://github.com/tashynw/qwizlab-app",
+    websiteUrl: "https://qwizlab.com/",
   },
 
   {
