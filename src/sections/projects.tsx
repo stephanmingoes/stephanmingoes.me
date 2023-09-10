@@ -174,7 +174,7 @@ const projects: Project[] = [
   },
   {
     name: "QwizLab",
-    description: `This website was created to showcase my portfolio, projects, and expertise in web development.`,
+    description: `Experience the future of learning with QwizLab! Our app, powered by artificial intelligence, transforms your notes into personalized quizzes. Elevate your learning journey today!.`,
     skills: [
       "NextJS",
       "TypeScript",
