@@ -39,7 +39,7 @@ const techStack = [
 export default function TechStack() {
   return (
     <div className="mb-4">
-      <Heading>Technologies</Heading>
+      <Heading>Skills</Heading>
       <div className="flex flex-row  items-start flex-wrap">
         {techStack.map((t) => (
           <div
