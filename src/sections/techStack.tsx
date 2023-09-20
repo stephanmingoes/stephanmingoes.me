@@ -4,8 +4,6 @@ import Heading from "../components/ui/heading";
 const techStack = [
   "JavaScript",
   "TypeScript",
-  "C#",
-  "Python",
   "Java",
   "GraphQL",
   "MSSQL",
