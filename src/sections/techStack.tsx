@@ -36,7 +36,7 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <div className="mb-4">
+    <section id="tech-stack" className="mb-8">
       <Heading>Skills</Heading>
       <div className="flex flex-row  items-start flex-wrap">
         {techStack.map((t) => (
@@ -48,6 +48,6 @@ export default function TechStack() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
