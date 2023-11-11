@@ -396,7 +396,7 @@ function ProjectCard({
   websiteUrl,
 }: Project) {
   return (
-    <Card className="relative">
+    <Card className="relative rounded-sm shadow-sm">
       <CardHeader>
         <CardTitle>{name}</CardTitle>
       </CardHeader>
@@ -412,13 +412,13 @@ function ProjectCard({
       </CardContent>
       <CardFooter className="flex justify-between space-x-5 absolute bottom-0">
         <Link href={githubUrl} target="_blank">
-          <Button variant="outline">
+          <Button variant="outline" className="rounded-sm shadow-sm">
             <FiGithub />
           </Button>
         </Link>
 
         <Link href={websiteUrl} target="_blank">
-          <Button>
+          <Button className="rounded-sm shadow-sm">
             <FiExternalLink />
           </Button>
         </Link>

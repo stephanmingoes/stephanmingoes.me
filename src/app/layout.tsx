@@ -5,7 +5,6 @@ import Footer from "@/sections/footer";
 import TRPCProvider from "@/providers/TRPCProvider";
 import { Toaster } from "@/components/ui/toaster";
 import { Metadata } from "next/types";
-import ApolloProvider from "@/providers/ApolloProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,17 +36,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <ApolloProvider>
-          <TRPCProvider>
-            <div className="flex justify-center items-center ">
-              <main className="w-10/12 lg:w-[850px]">
-                <Navbar />
-                {children}
-                <Footer />
-              </main>
-            </div>
-          </TRPCProvider>
-        </ApolloProvider>
+        <TRPCProvider>
+          <div className="flex justify-center items-center ">
+            <main className="w-10/12 lg:w-[850px]">
+              <Navbar />
+              {children}
+              <Footer />
+            </main>
+          </div>
+        </TRPCProvider>
         <Toaster />
       </body>
     </html>
