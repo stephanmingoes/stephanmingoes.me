@@ -1,51 +1,48 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Heading from "../components/ui/heading";
+import { Card } from "@/components/ui/card";
 const techStack = [
+  "Serverless Microservice",
+  "Cloud Computing",
+  "Unit Testing",
+  "Tailwind CSS",
+  "Jest/Vitest",
   "JavaScript",
   "TypeScript",
-  "Java",
+  "PostgreSQL",
+  "ExpressJS",
+  "DynamoDB",
   "GraphQL",
+  "MongoDB",
+  "Node.js",
+  "NestJS",
+  "Lambda",
+  "NextJS",
   "MSSQL",
   "MySQL",
-  "PostgreSQL",
-  "MongoDB",
-  "DynamoDB",
-  "HTML",
-  "CSS",
-  "Sass",
-  "NestJS",
-  "ExpressJS",
-  "React",
-  "NextJS",
-  "Vue",
   "Redux",
+  "React",
   "NoSQL",
-  "Git",
-  "Serverless Microservice",
-  "OOP",
+  "HTML",
+  "Sass",
   "AWS",
-  "Cloud Computing",
-  "Jest/Vitest",
-  "Unit Testing",
-  "Lambda",
+  "Git",
+  "OOP",
+  "Vue",
+  "CSS",
   "S3",
-  "Tailwind CSS",
-  "Node.js",
 ];
 
 export default function TechStack() {
   return (
     <section id="tech-stack" className="mb-8">
       <Heading>Skills</Heading>
-      <div className="flex flex-row  items-start flex-wrap">
+      <div className="flex flex-row gap-1 items-start flex-wrap">
         {techStack.map((t) => (
-          <div
-            key={t}
-            className="h-fit rounded-lg border bg-card text-card-foreground shadow  mr-1 mb-1 py-1 px-2 border-gray-200"
-          >
+          <Card key={t} className="py-1 px-2 rounded-sm shadow-sm">
             {t}
-          </div>
+          </Card>
         ))}
       </div>
     </section>
