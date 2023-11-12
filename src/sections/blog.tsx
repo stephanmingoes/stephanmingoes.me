@@ -68,7 +68,10 @@ export default async function Blog() {
         <Heading>Blogs</Heading>{" "}
         {blogData.data.publication.posts.edges.map((post) => {
           return (
-            <Link href={post.node.slug} key={post.node.slug}>
+            <Link
+              href={"https://blog.stephanmingoes.me/" + post.node.slug}
+              key={post.node.slug}
+            >
               <Card className="flex flex-row justify-between rounded-sm shadow-sm px-4 py-4">
                 <div className="flex flex-col">
                   <h1 className="text-xl font-semibold">{post.node.title}</h1>
@@ -100,82 +103,4 @@ export default async function Blog() {
       </section>
     </>
   );
-  // const { loading, error, data } = useQuery(getBlogs);
-  // if (loading)
-  //   return (
-  //     <section id="blog" className="mb-8">
-  //      {" "}
-  //       <div className="mb-4">
-  //         <Skeleton className="h-[20px] w-full md:w-3/4 mb-2 rounded-sm" />
-  //         <Skeleton className="h-[17px] w-3/4 md:w-2/6" />
-  //       </div>
-  //       <div className="mb-4">
-  //         <Skeleton className="h-[20px] w-full md:w-3/4 mb-2 rounded-sm" />
-  //         <Skeleton className="h-[17px] w-3/4 md:w-2/6" />
-  //       </div>
-  //       <div className="mb-4">
-  //         <Skeleton className="h-[20px] w-full md:w-3/4 mb-2 rounded-sm" />
-  //         <Skeleton className="h-[17px] w-3/4 md:w-2/6" />
-  //       </div>
-  //     </section>
-  //   );
-  // if (error)
-  //   return (
-  //     <section id="blog" className="mb-8">
-  //       <Heading>Blogs</Heading>{" "}
-  //       <Alert variant="destructive">
-  //         <AlertTitle>Error</AlertTitle>
-  //         <AlertDescription>Error fetching blogs.</AlertDescription>
-  //       </Alert>
-  //     </section>
-  //   );
-  // if (!data)
-  //   return (
-  //     <section id="blog" className="mb-8">
-  //       <Heading>Blogs</Heading>{" "}
-  //       <Alert variant="destructive">
-  //         <AlertTitle>Error</AlertTitle>
-  //         <AlertDescription>Error fetching blogs.</AlertDescription>
-  //       </Alert>
-  //     </section>
-  //   );
-  // return (
-  //   <section id="blog" className="mb-8">
-  //     <Heading>Blogs</Heading>
-  //     {data.user.publication.posts.map((post) => (
-  //       <>
-  //         <div
-  //           className="grid-cols-1 grid w-full gap-[16px] mb-4"
-  //           key={post._id}
-  //         >
-  //           <div className="w-full">
-  //             <Link
-  //               key={post._id}
-  //               href={`https://blog.stephanmingoes.me/${post.slug}`}
-  //             >
-  //               <h2 className="font-bold text-xl mb-1 hover:underline">
-  //                 {post.title}
-  //               </h2>
-  //             </Link>
-  //             <div className="flex flex-col space-y-1 md:space-y-0 md:flex-row md:items-center md:space-x-3 text-base text-muted-foreground">
-  //               <p className="">{new Date(post.dateAdded).toDateString()}</p>
-  //               <p className=" flex flex-row space-x-1 items-center">
-  //                 <span>
-  //                   <AiOutlineRead />
-  //                 </span>{" "}
-  //                 <span>{post.readTime} minute read</span>
-  //               </p>
-  //               <p className=" flex flex-row space-x-1 items-center">
-  //                 <span>
-  //                   <AiFillEye />
-  //                 </span>
-  //                 <span>{post.views}</span>
-  //               </p>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </>
-  //     ))}
-  //   </section>
-  // );
 }
