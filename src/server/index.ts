@@ -1,19 +1,12 @@
 import { ContactFormSchema } from "@/lib/types";
 import { publicProcedure, router } from "./trpc";
-import { resend } from "./resend";
-import ContactMeEmailTemplate from "@/components/template/contactMeEmailTemplate";
+import { transporter } from "./nodemailer";
 
 export const appRouter = router({
   contactMe: publicProcedure
     .input(ContactFormSchema)
     .mutation(async ({ input }) => {
-      await resend.emails.send({
-        from: "Stephan <stephan@stephanmingoes.me>",
-        to: [input.email],
-        subject: `Thanks for reaching out`,
-        react: ContactMeEmailTemplate({ name: input.name }),
-      });
-      await resend.emails.send({
+      await transporter.sendMail({
         from: "Stephan <stephan@stephanmingoes.me>",
         to: ["stephanmingoes@gmail.com"],
         subject: `Contact From ${input.email}`,
