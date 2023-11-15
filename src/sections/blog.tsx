@@ -36,6 +36,7 @@ type BlogListType = {
 
 export default async function Blog() {
   const data = await fetch("https://gql.hashnode.com/", {
+    next: { revalidate: 60 },
     method: "POST",
     headers: {
       "Content-Type": "application/json",
