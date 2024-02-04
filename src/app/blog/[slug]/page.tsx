@@ -1,4 +1,5 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Image from "next/image";
 
 type PostData = {
   data: {
@@ -23,6 +24,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       query: `query{
       post(id: "${params.slug}") {
         id
+        title
         content {
           html
         }
@@ -37,11 +39,17 @@ export default async function Page({ params }: { params: { slug: string } }) {
   });
 
   const blogData = (await data.json()) as PostData;
-  console.log(blogData);
 
   return (
     <>
-      <h1 className="text-xl font-bold">{blogData.data.post.title}</h1>
+      <h1 className="text-2xl font-bold mb-8">{blogData.data.post.title}</h1>
+      <Image
+        src={blogData.data.post.coverImage.url}
+        alt="blog header image"
+        width={1000}
+        height={400}
+        className="mb-8"
+      />
 
       <article
         className="prose lg:prose-lg"
