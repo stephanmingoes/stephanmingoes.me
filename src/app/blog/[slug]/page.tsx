@@ -48,7 +48,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         alt="blog header image"
         width={1000}
         height={400}
-        className="mb-8"
+        className="mb-8 rounded-sm"
       />
 
       <article
