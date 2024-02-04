@@ -10,6 +10,7 @@ const techStack = [
   "Jest/Vitest",
   "JavaScript",
   "TypeScript",
+  "C#/.NET",
   "PostgreSQL",
   "ExpressJS",
   "DynamoDB",

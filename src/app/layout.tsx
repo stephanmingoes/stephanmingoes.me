@@ -10,12 +10,13 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Stephan Mingoes",
-  description: "Full-Stack Software Developer",
+  description: "Full-Stack Software Developer, Full-Stack Software Engineer",
   authors: { name: "Stephan Mingoes" },
   keywords: [
     "Stephan Mingoes",
     "Software Developer Jamaica",
-    "Software Developer",
+    "Software Engineer Jamaica",
+    "Software Engineer",
     "Stephan",
     "Mingoes",
     "Stephen Mingoes",

@@ -11,7 +11,7 @@ export default function About() {
       <article>
         {" "}
         <p className="text-base text-justify">
-          As a Software Developer, I am constantly seeking new challenges and
+          As a Software Engineer, I am constantly seeking new challenges and
           opportunities to expand my knowledge and skillset. I am deeply
           passionate about using technology to solve real-world problems and
           have a strong foundation in Computer Science principles, including
@@ -23,11 +23,11 @@ export default function About() {
           Web Development to Cloud Computing. I am a detail-oriented and
           self-motivated learner, who is always eager to take on new challenges
           and learn new technologies.
-          <br /> <br />I am excited to continue my growth as a Software
-          Developer and hope to make a positive impact through my work in the
-          tech industry. I believe that with my technical skills and
-          problem-solving mindset, I have the potential to make meaningful
-          contributions to the world of technology.
+          <br /> <br />I am excited to continue my growth as a Software Engineer
+          and hope to make a positive impact through my work in the tech
+          industry. I believe that with my technical skills and problem-solving
+          mindset, I have the potential to make meaningful contributions to the
+          world of technology.
         </p>
       </article>
     </div>

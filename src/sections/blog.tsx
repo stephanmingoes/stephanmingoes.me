@@ -70,7 +70,11 @@ export default async function Blog() {
         {blogData.data.publication.posts.edges.map((post) => {
           return (
             <Link
-              href={"https://blog.stephanmingoes.me/" + post.node.slug}
+              href={
+                (process.env.VERCEL_URL ?? "http://localhost:3000") +
+                "/blog/" +
+                post.node.slug
+              }
               key={post.node.slug}
             >
               <Card className="flex flex-row justify-between rounded-sm shadow-sm px-4 py-4">

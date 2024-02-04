@@ -8,7 +8,7 @@ export default function Header() {
         <h1 className="md:text-2xl text-2xl font-bold tracking-tight mb-4">
           I&apos;m Stephan
         </h1>
-        <h3 className="text-base mb-4">Software Developer 👨‍💻</h3>
+        <h3 className="text-base mb-4">Software Engineer 👨‍💻</h3>
         <p className="text-muted-foreground text-base">
           Building fast
           <span className=" text-slate-50">⚡</span>, scalable
