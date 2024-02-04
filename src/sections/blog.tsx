@@ -69,7 +69,10 @@ export default async function Blog() {
         <Heading>Blogs</Heading>{" "}
         {blogData.data.publication.posts.edges.map((post) => {
           return (
-            <Link href={"/blog/" + post.node.slug} key={post.node.slug}>
+            <Link
+              href={"https://www.stephanmingoes.me/blog/" + post.node.slug}
+              key={post.node.slug}
+            >
               <Card className="flex flex-row justify-between rounded-sm shadow-sm px-4 py-4">
                 <div className="flex flex-col">
                   <h1 className="text-xl font-semibold">{post.node.title}</h1>
