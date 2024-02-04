@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 type PostNode = {
   cursor: string;
   node: {
+    id: string;
     title: string;
     slug: string;
     views: number;
@@ -51,6 +52,7 @@ export default async function Blog() {
       edges {
         cursor
         node {
+          id
           title
           slug
           views
@@ -69,10 +71,7 @@ export default async function Blog() {
         <Heading>Blogs</Heading>{" "}
         {blogData.data.publication.posts.edges.map((post) => {
           return (
-            <Link
-              href={"https://www.stephanmingoes.me/blog/" + post.node.slug}
-              key={post.node.slug}
-            >
+            <Link href={`/blog/` + post.node.id} key={post.node.slug}>
               <Card className="flex flex-row justify-between rounded-sm shadow-sm px-4 py-4">
                 <div className="flex flex-col">
                   <h1 className="text-xl font-semibold">{post.node.title}</h1>
