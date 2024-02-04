@@ -39,7 +39,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <TRPCProvider>
           <div className="flex justify-center items-center ">
-            <main className="w-10/12 lg:w-[850px]">
+            <main className="w-11/12 lg:w-[850px]">
               <Navbar />
               {children}
               <Footer />

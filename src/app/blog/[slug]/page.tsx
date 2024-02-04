@@ -41,10 +41,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   return (
     <article>
-      <h1 className="text-3xl font-bold">{blogData.data.post.title}</h1>
+      <h1 className="text-xl font-bold">{blogData.data.post.title}</h1>
 
       <article
-        className="prose lg:prose-xl"
+        className="prose lg:prose-lg"
         dangerouslySetInnerHTML={{ __html: blogData.data.post.content }}
       ></article>
     </article>
