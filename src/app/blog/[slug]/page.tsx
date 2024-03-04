@@ -1,4 +1,5 @@
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { Metadata } from "next";
+import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import Image from "next/image";
 
 type PostData = {
@@ -9,12 +10,15 @@ type PostData = {
       title: string;
       publishedAt: string;
       views: number;
+      seo: {
+        title: string;
+        description: string;
+      };
       coverImage: { url: string };
     };
   };
 };
-
-export default async function Page({ params }: { params: { slug: string } }) {
+async function getBlog(id: string): Promise<PostData> {
   const data = await fetch("https://gql.hashnode.com/", {
     method: "POST",
     headers: {
@@ -22,12 +26,16 @@ export default async function Page({ params }: { params: { slug: string } }) {
     },
     body: JSON.stringify({
       query: `query{
-      post(id: "${params.slug}") {
+      post(id: "${id}") {
         id
         title
         content {
           html
         }
+        seo {
+      title
+      description
+    }
         publishedAt
         views
         coverImage {
@@ -37,8 +45,31 @@ export default async function Page({ params }: { params: { slug: string } }) {
     }`,
     }),
   });
-
   const blogData = (await data.json()) as PostData;
+
+  return blogData;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const blogData = await getBlog(params.slug);
+
+  return {
+    title: blogData.data.post.seo.title,
+    description: blogData.data.post.seo.description,
+    openGraph: {
+      title: blogData.data.post.seo.title,
+      description: blogData.data.post.seo.description,
+      images: { url: blogData.data.post.coverImage.url },
+      type: "article",
+    },
+  };
+}
+export default async function Page({ params }: { params: { slug: string } }) {
+  const blogData = await getBlog(params.slug);
 
   return (
     <>

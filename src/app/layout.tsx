@@ -9,6 +9,7 @@ import { Metadata } from "next/types";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://stephanmingoes.me"),
   title: "Stephan Mingoes",
   description: "Full-Stack Software Engineer",
   authors: { name: "Stephan Mingoes" },
