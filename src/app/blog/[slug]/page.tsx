@@ -83,7 +83,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
       />
 
       <article
-        className="prose lg:prose-lg"
+        className="prose dark:text-white lg:prose-lg"
         dangerouslySetInnerHTML={{ __html: blogData.data.post.content.html }}
       ></article>
     </>
