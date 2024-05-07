@@ -23,7 +23,7 @@ import {
   SiExpress,
 } from "react-icons/si";
 import Link from "next/link";
-type IconType = typeof BiLogoTypescript | React.SVGProps<SVGSVGElement>;
+type IconType = typeof BiLogoTypescript | React.ElementType;
 import {
   HoverCard,
   HoverCardContent,

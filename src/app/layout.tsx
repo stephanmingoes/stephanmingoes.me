@@ -5,6 +5,7 @@ import Footer from "@/sections/footer";
 import TRPCProvider from "@/providers/TRPCProvider";
 import { Toaster } from "@/components/ui/toaster";
 import { Metadata } from "next/types";
+import { ThemeProvider } from "@/components/themeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,15 +39,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <TRPCProvider>
-          <div className="flex justify-center items-center ">
-            <main className="w-11/12 lg:w-[850px]">
-              <Navbar />
-              {children}
-              <Footer />
-            </main>
-          </div>
-        </TRPCProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {" "}
+          <TRPCProvider>
+            <div className="flex justify-center items-center ">
+              <main className="w-11/12 lg:w-[850px]">
+                <Navbar />
+                {children}
+                <Footer />
+              </main>
+            </div>
+          </TRPCProvider>
+        </ThemeProvider>
+
         <Toaster />
       </body>
     </html>

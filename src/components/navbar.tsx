@@ -4,11 +4,13 @@ import React from "react";
 
 import { usePathname } from "next/navigation";
 import ContactForm from "./contactForm";
+import ThemeToggle from "./themeToggle";
 
 export default function Navbar() {
   return (
-    <nav className="my-8">
+    <nav className="my-8 flex justify-between items-center">
       <NavMenu />
+      <ThemeToggle />
     </nav>
   );
 }
