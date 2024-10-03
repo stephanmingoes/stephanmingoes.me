@@ -4,5 +4,5 @@
 
 ## Built with
 
-- [`NextJS 13`](https://nextjs.org/docs)
+- [`NextJS`](https://nextjs.org/docs)
 - [`TailwindCSS`](https://tailwindcss.com/)
