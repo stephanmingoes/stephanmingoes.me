@@ -23,6 +23,11 @@ import {
   SiExpress,
 } from "react-icons/si";
 import Link from "next/link";
+import Image, { StaticImageData } from "next/image";
+import showdev from "../../public/images/show-dev.png";
+import qwizlab from "../../public/images/qwizlab.png";
+import budgettracker from "../../public/images/budget-tracker.png";
+import myweb from "../../public/images/myweb.png";
 type IconType = typeof BiLogoTypescript | React.ElementType;
 import {
   HoverCard,
@@ -43,6 +48,7 @@ type Project = {
   skills: string[];
   githubUrl: string;
   websiteUrl: string;
+  imagePath: string | StaticImageData;
 };
 const technologies: SkillType[] = [
   {
@@ -171,6 +177,7 @@ const projects: Project[] = [
     ],
     githubUrl: "https://github.com/stephanmingoes/stephanmingoes.me",
     websiteUrl: "https://www.stephanmingoes.me/",
+    imagePath: myweb,
   },
   {
     name: "QwizLab",
@@ -186,6 +193,7 @@ const projects: Project[] = [
     ],
     githubUrl: "https://github.com/tashynw/qwizlab-app",
     websiteUrl: "https://qwizlab.com/",
+    imagePath: qwizlab,
   },
 
   {
@@ -206,6 +214,7 @@ const projects: Project[] = [
     ],
     githubUrl: "https://github.com/stephanmingoes/budget_tracker",
     websiteUrl: "https://budget-trackerr.vercel.app/",
+    imagePath: budgettracker,
   },
   {
     name: "Show Dev",
@@ -213,6 +222,7 @@ const projects: Project[] = [
     skills: ["NextJS", "TypeScript", "Firebase", "ChakraUI", "Vercel"],
     githubUrl: "https://github.com/stephanmingoes/show_dev",
     websiteUrl: "https://show-dev.vercel.app/",
+    imagePath: showdev,
   },
 ];
 
@@ -369,7 +379,7 @@ function SkillCard({
       <HoverCardTrigger asChild>
         <span className={`${className}  mr-2`}>{<Icon />}</span>
       </HoverCardTrigger>
-      <HoverCardContent className="w-80">
+      <HoverCardContent className="dark:bg-[#101010] dark:border-white rounded-none w-80">
         <div className="flex justify-between space-x-4">
           <span className={`${className} text-5xl`}>{<Icon />}</span>
 
@@ -394,9 +404,16 @@ function ProjectCard({
   skills,
   githubUrl,
   websiteUrl,
+  imagePath,
 }: Project) {
   return (
-    <Card className="relative rounded-sm shadow-sm">
+    <Card className="relative dark:border-white  bg-transparent rounded-none  shadow-sm hover:cursor-pointer">
+      <Image
+        src={imagePath}
+        alt={name}
+        className="w-full mb-5"
+        layout="responsive"
+      />
       <CardHeader>
         <CardTitle>{name}</CardTitle>
       </CardHeader>

@@ -38,10 +38,13 @@ const techStack = [
 export default function TechStack() {
   return (
     <section id="tech-stack" className="mb-8">
-      <Heading>Skills</Heading>
+      <Heading>Technologies</Heading>
       <div className="flex flex-row gap-1 items-start flex-wrap">
         {techStack.map((t) => (
-          <Card key={t} className="py-1 px-2 rounded-sm shadow-sm">
+          <Card
+            key={t}
+            className="py-1 dark:border-white px-2 bg-transparent rounded-none shadow-sm hover:text-white hover:bg-[#101010] dark:hover:bg-white dark:hover:text-[#101010] hover:cursor-pointer transition-all duration-300 ease-in-out"
+          >
             {t}
           </Card>
         ))}

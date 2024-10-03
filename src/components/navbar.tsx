@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <nav className="my-8 flex justify-between items-center">
       <NavMenu />
-      <ThemeToggle />
+      {/* <ThemeToggle /> */}
     </nav>
   );
 }
@@ -28,11 +28,7 @@ function Links() {
   return (
     <>
       {" "}
-      {[
-        ["Home", "/"],
-
-        ["About", "/about"],
-      ].map((link: string[]) => (
+      {[["Home", "/"]].map((link: string[]) => (
         <li key={link[0]}>
           <Link
             className={` ${

@@ -1,20 +1,21 @@
 import Image from "next/image";
 import React from "react";
-import logo3 from "../../public/images/me.png";
+import logo3 from "../../public/images/me.jpeg";
 export default function Header() {
   return (
     <div className="flex lg:flex-row justify-between lg:items-center mb-8 flex-col-reverse">
       <div>
-        <h1 className="md:text-2xl text-2xl font-bold tracking-tight mb-4">
+        <h1 className="md:text-2xl text-2xl font-bold tracking-tight mb-4 text-justify">
           I&apos;m Stephan
         </h1>
-        <h3 className="text-base mb-4">Software Engineer 👨‍💻</h3>
+        <h3 className="text-muted-foreground text-lg mb-4">
+          Software Engineer
+        </h3>
         <p className="text-muted-foreground text-base">
-          Building fast
-          <span className=" text-slate-50">⚡</span>, scalable
-          <span className=" text-slate-50">📈</span>, robust
-          <span className=" text-slate-50">💪</span>, and maintainable
-          <span className=" text-slate-50">⛑️</span> software solutions.
+          As a Software Engineer with a strong background in Computer Science
+          (BSc), I excel in developing user-friendly interfaces and architecting
+          backend systems. I&apos;m passionate about applying my technical
+          skills to solve complex challenges and deliver innovative solutions.
         </p>
       </div>
 

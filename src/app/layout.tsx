@@ -38,14 +38,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} dark:bg-[#101010] antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          {" "}
           <TRPCProvider>
             <div className="flex justify-center items-center ">
               <main className="w-11/12 lg:w-[850px]">

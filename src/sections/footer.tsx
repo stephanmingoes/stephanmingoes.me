@@ -9,7 +9,7 @@ export default function Footer() {
       <div className=" flex space-x-4">
         <a
           href="https://www.linkedin.com/in/stephanmingoes"
-          className="text-blue-600"
+          className=""
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -17,7 +17,7 @@ export default function Footer() {
         </a>
         <a
           href="https://www.github.com/stephanmingoes"
-          className="text-blue-950"
+          className=""
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -25,7 +25,7 @@ export default function Footer() {
         </a>
         <a
           href="mailto:stephanmingoes@gmail.com"
-          className="text-red-600"
+          className=""
           target="_blank"
           rel="noopener noreferrer"
         >
