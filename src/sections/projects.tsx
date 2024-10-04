@@ -23,7 +23,7 @@ import {
   SiExpress,
 } from "react-icons/si";
 import Link from "next/link";
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/legacy/image";
 import showdev from "../../public/images/show-dev.png";
 import qwizlab from "../../public/images/qwizlab.png";
 import budgettracker from "../../public/images/budget-tracker.png";

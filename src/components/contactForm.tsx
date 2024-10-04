@@ -35,13 +35,13 @@ export default function ContactForm() {
       form.reset();
       toast({
         title: "Thanks for reaching out 😉",
-        description: "I'll get back you soon",
+        description: "I'll get back to you soon",
       });
     },
     onError() {
       toast({
         variant: "destructive",
-        title: "Oh no, something went wrong sending message, try again",
+        title: "Something went wrong sending message, try again",
       });
     },
   });
@@ -68,7 +68,7 @@ export default function ContactForm() {
         </Link>
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] rounded-none dark:border-white">
         <DialogHeader>
           <DialogTitle>Let&apos;s talk</DialogTitle>
           <DialogDescription>

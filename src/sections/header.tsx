@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import React from "react";
 import logo3 from "../../public/images/me.jpeg";
 export default function Header() {
@@ -20,7 +20,14 @@ export default function Header() {
       </div>
 
       <div className="basis-1/2 lg:flex flex-row justify-end visible lg:mb-0 mb-8">
-        <Image alt="logo" src={logo3} width="150" className="rounded-full " />
+        <Image
+          alt="logo"
+          src={logo3}
+          width="150"
+          height="150"
+          layout="fixed"
+          className="rounded-full "
+        />
       </div>
     </div>
   );
