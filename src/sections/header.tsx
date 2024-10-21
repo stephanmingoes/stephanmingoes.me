@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/legacy/image";
 import React from "react";
 import logo3 from "../../public/images/me.jpeg";
-import ContactForm from "@/components/contactForm";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
+
 export default function Header() {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (
     <div className="flex lg:flex-row justify-between lg:items-center mb-8 flex-col-reverse">
       <div className="flex flex-col space-y-4">
@@ -17,11 +20,12 @@ export default function Header() {
           backend systems. I&apos;m passionate about applying my technical
           skills to solve complex challenges and deliver innovative solutions.
         </p>
-        <ContactForm>
+
+        <Link href="/chat">
           <Button className="w-max rounded-none" variant={"default"}>
             Let's Talk
-          </Button>
-        </ContactForm>
+          </Button>{" "}
+        </Link>
       </div>
 
       <div className="basis-1/2 lg:flex flex-row justify-end visible lg:mb-0 mb-8">

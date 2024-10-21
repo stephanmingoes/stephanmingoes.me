@@ -1,13 +1,11 @@
 import Navbar from "@/components/navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
 import Footer from "@/sections/footer";
 import TRPCProvider from "@/providers/TRPCProvider";
 import { Toaster } from "@/components/ui/toaster";
 import { Metadata } from "next/types";
 import { ThemeProvider } from "@/components/themeProvider";
-
-const inter = Inter({ subsets: ["latin"] });
+import { GeistSans } from "geist/font/sans";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://stephanmingoes.me"),
@@ -38,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} dark:bg-[#101010] antialiased`}>
+      <body className={`${GeistSans.className} dark:bg-[#101010] antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
