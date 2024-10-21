@@ -1,5 +1,5 @@
+import CollapsibleSection from "@/components/collapsible-section";
 import { Card, CardHeader } from "@/components/ui/card";
-import Heading from "@/components/ui/heading";
 import React from "react";
 
 type Experience = {
@@ -71,8 +71,7 @@ const experiences: Experience[] = [
 
 export default function Experience() {
   return (
-    <section className="mb-8">
-      <Heading>Experience</Heading>
+    <CollapsibleSection id="experience" header="Experience">
       <div className="space-y-6">
         {experiences.map((exp, index) => (
           <Card
@@ -99,6 +98,6 @@ export default function Experience() {
           </Card>
         ))}
       </div>
-    </section>
+    </CollapsibleSection>
   );
 }

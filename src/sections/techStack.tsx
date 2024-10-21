@@ -1,44 +1,45 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Heading from "../components/ui/heading";
 import { Card } from "@/components/ui/card";
+import CollapsibleSection from "@/components/collapsible-section";
 const techStack = [
   "Serverless Microservice",
-  "Cloud Computing",
-  "Unit Testing",
-  "Tailwind CSS",
+  "React",
+  "Git",
+  "HTML",
+  "NextJS",
   "Jest/Vitest",
-  "JavaScript",
-  "TypeScript",
-  "C#/.NET",
-  "PostgreSQL",
-  "ExpressJS",
-  "DynamoDB",
+  "Figma",
+  "React Native",
+  "CSS",
+  "MySQL",
   "GraphQL",
+  "Redux",
+  "ExpressJS",
+  "JavaScript",
+  "OOP",
+  "NestJS",
+  "DynamoDB",
+  "C#/.NET",
+  "Cloud Computing",
+  "AWS",
+  "Lambda",
   "MongoDB",
   "Node.js",
-  "NestJS",
-  "Lambda",
-  "NextJS",
-  "MSSQL",
-  "MySQL",
-  "Redux",
-  "React",
-  "NoSQL",
-  "HTML",
-  "Sass",
-  "AWS",
-  "Git",
-  "OOP",
+  "Tailwind CSS",
   "Vue",
-  "CSS",
   "S3",
+  "Unit Testing",
+  "PostgreSQL",
+  "NoSQL",
+  "TypeScript",
+  "MSSQL",
+  "Sass",
 ];
 
 export default function TechStack() {
   return (
-    <section id="tech-stack" className="mb-8">
-      <Heading>Technologies</Heading>
+    <CollapsibleSection id="tech-stack" header="Technologies" className="">
       <div className="flex flex-row gap-1 items-start flex-wrap">
         {techStack.map((t) => (
           <Card
@@ -49,6 +50,6 @@ export default function TechStack() {
           </Card>
         ))}
       </div>
-    </section>
+    </CollapsibleSection>
   );
 }

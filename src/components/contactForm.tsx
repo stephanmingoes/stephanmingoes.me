@@ -28,7 +28,11 @@ import { ContactFormSchema, ContactFormType } from "@/lib/types";
 import { trpc } from "@/trpc/client";
 import { useToast } from "./ui/use-toast";
 
-export default function ContactForm() {
+export default function ContactForm({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const { toast } = useToast();
   const { mutate: contactFormMutation } = trpc.contactMe.useMutation({
     onSuccess() {
@@ -50,6 +54,7 @@ export default function ContactForm() {
     defaultValues: {
       name: "",
       email: "",
+      companyName: "",
       message: "",
     },
   });
@@ -62,11 +67,7 @@ export default function ContactForm() {
   }
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        <Link href={""} className={`lgtext-slate-900  text-sm`}>
-          Contact
-        </Link>
-      </DialogTrigger>
+      <DialogTrigger asChild>{children}</DialogTrigger>
 
       <DialogContent className="sm:max-w-[425px] rounded-none dark:border-white">
         <DialogHeader>
@@ -84,6 +85,23 @@ export default function ContactForm() {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel>Name</FormLabel>
+                  <FormControl>
+                    <Input
+                      className="rounded-sm shadow-sm"
+                      placeholder=""
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="companyName"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Name of Company (Optional)</FormLabel>
                   <FormControl>
                     <Input
                       className="rounded-sm shadow-sm"

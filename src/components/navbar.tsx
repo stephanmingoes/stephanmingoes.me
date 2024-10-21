@@ -41,9 +41,6 @@ function Links() {
           </Link>
         </li>
       ))}
-      <li>
-        <ContactForm />
-      </li>
     </>
   );
 }

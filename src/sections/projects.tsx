@@ -1,5 +1,4 @@
 import React from "react";
-import Heading from "../components/ui/heading";
 import {
   Card,
   CardContent,
@@ -34,6 +33,7 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import CollapsibleSection from "@/components/collapsible-section";
 
 type SkillType = {
   icon: IconType;
@@ -162,26 +162,27 @@ const technologies: SkillType[] = [
 ];
 
 const projects: Project[] = [
-  {
-    name: "My Website",
-    description: `This website was created to showcase my portfolio, projects, and expertise in web development.`,
-    skills: [
-      "NextJS",
-      "TypeScript",
-      "Resend",
-      "ShadCn",
-      "TailwindCSS",
-      "Vercel",
-      "TRPC",
-      "Resend",
-    ],
-    githubUrl: "https://github.com/stephanmingoes/stephanmingoes.me",
-    websiteUrl: "https://www.stephanmingoes.me/",
-    imagePath: myweb,
-  },
+  // {
+  //   name: "My Website",
+  //   description: `This website was created to showcase my portfolio, projects, and expertise in web development.`,
+  //   skills: [
+  //     "NextJS",
+  //     "TypeScript",
+  //     "Resend",
+  //     "ShadCn",
+  //     "TailwindCSS",
+  //     "Vercel",
+  //     "TRPC",
+  //     "Resend",
+  //   ],
+  //   githubUrl: "https://github.com/stephanmingoes/stephanmingoes.me",
+  //   websiteUrl: "https://www.stephanmingoes.me/",
+  //   imagePath: myweb,
+  // },
   {
     name: "QwizLab",
-    description: `Experience the future of learning with QwizLab! Our app, powered by artificial intelligence, transforms your notes into personalized quizzes. Elevate your learning journey today!.`,
+    description: `Powered by artificial intelligence, transforms your notes into personalized quizzes. Allows you to create, share, and discover quizzes on any topic.
+    `,
     skills: [
       "NextJS",
       "TypeScript",
@@ -198,7 +199,7 @@ const projects: Project[] = [
 
   {
     name: "Budget Tracker",
-    description: `The budget tracking application enables users to manage their
+    description: `This application enables users to manage their
           finances. It allows you to monitor income, expenses, and budgets
           seamlessly within a single interface.`,
     skills: [
@@ -216,26 +217,25 @@ const projects: Project[] = [
     websiteUrl: "https://budget-trackerr.vercel.app/",
     imagePath: budgettracker,
   },
-  {
-    name: "Show Dev",
-    description: `Simple Blog Website for developers to share, showcase, and promote their work, gain inspiration, and find opportunities to collaborate and grow..`,
-    skills: ["NextJS", "TypeScript", "Firebase", "ChakraUI", "Vercel"],
-    githubUrl: "https://github.com/stephanmingoes/show_dev",
-    websiteUrl: "https://show-dev.vercel.app/",
-    imagePath: showdev,
-  },
+  // {
+  //   name: "Show Dev",
+  //   description: `Simple Blog Website for developers to share, showcase, and promote their work, gain inspiration, and find opportunities to collaborate and grow..`,
+  //   skills: ["NextJS", "TypeScript", "Firebase", "ChakraUI", "Vercel"],
+  //   githubUrl: "https://github.com/stephanmingoes/show_dev",
+  //   websiteUrl: "https://show-dev.vercel.app/",
+  //   imagePath: showdev,
+  // },
 ];
 
 export default function Projects() {
   return (
-    <div>
-      <Heading>Projects</Heading>
+    <CollapsibleSection id="personal-projects" header="Personal Projects">
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 ">
         {projects.map((project) => (
           <ProjectCard key={project.name} {...project} />
         ))}
       </div>
-    </div>
+    </CollapsibleSection>
   );
 }
 
