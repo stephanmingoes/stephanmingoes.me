@@ -36,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.className} dark:bg-[#101010] antialiased`}>
+      <body className={`${GeistSans.className} dark:bg-[#101010] antialiased `}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

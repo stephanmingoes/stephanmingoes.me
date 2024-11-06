@@ -23,10 +23,8 @@ import {
 } from "react-icons/si";
 import Link from "next/link";
 import Image, { StaticImageData } from "next/legacy/image";
-import showdev from "../../public/images/show-dev.png";
 import qwizlab from "../../public/images/qwizlab.png";
 import budgettracker from "../../public/images/budget-tracker.png";
-import myweb from "../../public/images/myweb.png";
 type IconType = typeof BiLogoTypescript | React.ElementType;
 import {
   HoverCard,
@@ -34,6 +32,7 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import CollapsibleSection from "@/components/collapsible-section";
+import { Globe } from "lucide-react";
 
 type SkillType = {
   icon: IconType;
@@ -162,23 +161,6 @@ const technologies: SkillType[] = [
 ];
 
 const projects: Project[] = [
-  // {
-  //   name: "My Website",
-  //   description: `This website was created to showcase my portfolio, projects, and expertise in web development.`,
-  //   skills: [
-  //     "NextJS",
-  //     "TypeScript",
-  //     "Resend",
-  //     "ShadCn",
-  //     "TailwindCSS",
-  //     "Vercel",
-  //     "TRPC",
-  //     "Resend",
-  //   ],
-  //   githubUrl: "https://github.com/stephanmingoes/stephanmingoes.me",
-  //   websiteUrl: "https://www.stephanmingoes.me/",
-  //   imagePath: myweb,
-  // },
   {
     name: "QwizLab",
     description: `Powered by artificial intelligence, transforms your notes into personalized quizzes. Allows you to create, share, and discover quizzes on any topic.
@@ -217,14 +199,6 @@ const projects: Project[] = [
     websiteUrl: "https://budget-trackerr.vercel.app/",
     imagePath: budgettracker,
   },
-  // {
-  //   name: "Show Dev",
-  //   description: `Simple Blog Website for developers to share, showcase, and promote their work, gain inspiration, and find opportunities to collaborate and grow..`,
-  //   skills: ["NextJS", "TypeScript", "Firebase", "ChakraUI", "Vercel"],
-  //   githubUrl: "https://github.com/stephanmingoes/show_dev",
-  //   websiteUrl: "https://show-dev.vercel.app/",
-  //   imagePath: showdev,
-  // },
 ];
 
 export default function Projects() {
@@ -429,14 +403,17 @@ function ProjectCard({
       </CardContent>
       <CardFooter className="flex justify-between space-x-5 absolute bottom-0">
         <Link href={githubUrl} target="_blank">
-          <Button variant="outline" className="rounded-sm shadow-sm">
+          <Button
+            variant="outline"
+            className="rounded-none dark:border-white  shadow-sm"
+          >
             <FiGithub />
           </Button>
         </Link>
 
         <Link href={websiteUrl} target="_blank">
-          <Button className="rounded-sm shadow-sm">
-            <FiExternalLink />
+          <Button className="rounded-none dark:border-white   shadow-sm">
+            <Globe />
           </Button>
         </Link>
       </CardFooter>

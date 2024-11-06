@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 import { usePathname } from "next/navigation";
-import ContactForm from "./contactForm";
+import ContactForm from "./contact-form";
 import ThemeToggle from "./themeToggle";
 
 export default function Navbar() {
