@@ -69,7 +69,7 @@ export default function Experience() {
         {experiences.map((exp, index) => (
           <Card
             key={index}
-            className=" bg-transparent space-x-4 flex flex-row items-start border-none p-0 shadow-none"
+            className=" bg-transparent space-y-3 md:space-y-0 md:space-x-4 flex flex-col md:flex-row items-start border-none p-0 shadow-none"
           >
             <Image
               src={exp.image}
