@@ -30,7 +30,7 @@ export default function Header() {
             shimmerColor="black"
             shimmerSize="0.07em"
           >
-            Let's Talk
+            Hire Me
           </ShimmerButton>
         </Link>
       </div>

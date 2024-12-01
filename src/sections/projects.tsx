@@ -163,7 +163,7 @@ const technologies: SkillType[] = [
 const projects: Project[] = [
   {
     name: "QwizLab",
-    description: `Powered by artificial intelligence, transforms your notes into personalized quizzes. Allows you to create, share, and discover quizzes on any topic.
+    description: `Powered by artificial intelligence, QuizLab transforms your notes into personalized quizzes. Allowing you to create, share, and discover quizzes on any topic.
     `,
     skills: [
       "NextJS",
